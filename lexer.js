@@ -100,6 +100,6 @@ const lexer = (input) => {
     return tokens;
 };
 
-exports.module = {
-    lexer,
+module.exports  = {
+    lexer: lexer,
 };

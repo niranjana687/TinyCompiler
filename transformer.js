@@ -1,5 +1,4 @@
-import { traverser } from './traverser.js';
-
+const traverser = require('./traverser.js')
 const transformer = (ast) => {
 
     //to store transformed ast.
@@ -11,7 +10,7 @@ const transformer = (ast) => {
     
       ast._context = newAst.body;
       
-      traverser(ast, {
+      traverser.traverser(ast, {
     
        
         NumberLiteral: {
@@ -71,3 +70,7 @@ const transformer = (ast) => {
      
       return newAst;
 }
+
+module.exports = {
+    transformer: transformer,
+};

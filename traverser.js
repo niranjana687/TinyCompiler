@@ -1,5 +1,3 @@
-import { parser } from './parser.js';
-
 const traverser = (ast, visitor) => {
 
     function traverseArray (array, parent) {
@@ -43,6 +41,7 @@ const traverser = (ast, visitor) => {
     traverseNode(ast, null);
 }
 
-exports.module = {
-    traverser,
+module.exports = {
+    traverser: traverser,
 };
+

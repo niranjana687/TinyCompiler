@@ -1,5 +1,3 @@
-import { lexer, module } from './lexer.js';
-
 //returns abstract syntax tree
 
 const parser = (tokens) => {
@@ -71,6 +69,6 @@ const parser = (tokens) => {
      return ast;
 }
 
-exports.module = {
-    parser,
+module.exports  = {
+    parser: parser,
 }
