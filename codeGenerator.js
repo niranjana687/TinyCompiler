@@ -42,6 +42,5 @@ const codeGenerator = (node) => {
     }
   }
 
-module.exports  = {
-    codeGenerator: codeGenerator,
-  };
+module.exports  =  codeGenerator;
+ 

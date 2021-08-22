@@ -8,14 +8,18 @@ const transformer =  require('./transformer.js');
 const codeGenerator = require('./codeGenerator.js');
 
 let input = fs.readFileSync('./source.lisp').toString();
+console.log(input);
 
 const compiler = (input) => {
-    let tokens = lexer.lexer(input);
-    let ast = parser.parser(tokens);
-    let newAST = transformer.transformer(ast);
-    let output = codeGenerator.codeGenerator(newAST);
-
-    fs.writeFileSync('output.txt', output);
+    let tokens = lexer(input);
+    console.log(tokens);
+    let ast = parser(tokens);
+    console.log(ast);
+    let newAST = transformer(ast);
+    console.log(newAST);
+    let output = codeGenerator(newAST);
+    console.log(output);
+    fs.writeFileSync('output.txt', output.toString());
 }
 
 compiler(input);

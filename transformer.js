@@ -71,6 +71,4 @@ const transformer = (ast) => {
       return newAst;
 }
 
-module.exports = {
-    transformer: transformer,
-};
+module.exports =  transformer;

@@ -41,7 +41,5 @@ const traverser = (ast, visitor) => {
     traverseNode(ast, null);
 }
 
-module.exports = {
-    traverser: traverser,
-};
+module.exports = traverser;
 

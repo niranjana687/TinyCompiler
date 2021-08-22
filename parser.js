@@ -69,6 +69,4 @@ const parser = (tokens) => {
      return ast;
 }
 
-module.exports  = {
-    parser: parser,
-}
+module.exports = parser;
